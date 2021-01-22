@@ -38,4 +38,8 @@ const reference = () => C.string('[[')
 
 const textParser = () => reference().or((C.letters()).or(C.char(' ').or(C.notChar(' '))).drop()).rep()
 
-module.exports = () => titleParser().then(C.char('\n').drop()).then(tagOrAliasParser().optrep()).then(textParser())
+const documentParser = () => titleParser().then(C.char('\n').drop()).then(tagOrAliasParser().optrep()).then(textParser())
+
+module.exports = {
+    documentParser
+}
