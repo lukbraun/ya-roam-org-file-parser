@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "parsefile",
+      "connection": "ya-roam_SendAndListenKey_SERVICEBUS"
+    },
+    {
+      "name": "outputSbMsg",
+      "direction": "out",
+      "type": "serviceBus",
+      "queueName": "insertfile",
+      "connection": "ya-roam_SendAndListenKey_SERVICEBUS"
+    }
+  ]
+}
