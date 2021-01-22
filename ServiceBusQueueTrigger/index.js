@@ -1,3 +1,5 @@
+const { documentParser } = require('./parsing');
+
 module.exports = async function(context, mySbMsg) {
     const parse = (msg) => {
         if(!msg) return {};
